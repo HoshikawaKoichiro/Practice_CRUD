@@ -1,0 +1,2 @@
+class Kiwi < ApplicationRecord
+end

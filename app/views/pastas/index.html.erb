@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<h1>Pastas</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pastas.each do |pasta|%>
+      <tr>
+        <td><%= pasta.title %></td>
+        <td><%= pasta.body %></td>
+        <td><%= link_to 'Show', pasta %></td>
+        <td><%= link_to 'Edit', edit_pasta_path(pasta) %></td>
+        <td><%= link_to 'Destroy', pasta,method: :delete, data:{confirm:'Are you sure?'}%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+  <%= link_to 'New Pasta', new_pasta_path %>

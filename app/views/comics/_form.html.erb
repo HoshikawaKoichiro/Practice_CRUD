@@ -1,0 +1,26 @@
+<%= form_with(model:comic) do |form| %>
+  <% if comic.errors.any? %>
+    <div id= "error_explanation">
+      <h2><%= pluralize(comic.errors.count, "error") %> prohibited this comic form being saved: </h2>
+
+      <ul>
+        <% comic.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+        <% end %>
+      </li>
+    </div>
+  <% end %>
+
+    <div class= "field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

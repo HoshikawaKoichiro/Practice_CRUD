@@ -1,0 +1,14 @@
+<p id="notce"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @banana.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @banana.body %>
+</p>
+
+<%= link_to 'Edit', edit_banana_path(@banana) %>
+<%= link_to 'Back', bananas_path %>

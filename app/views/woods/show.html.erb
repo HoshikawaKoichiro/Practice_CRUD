@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @wood.title %>
+</p>
+
+<p>
+  <strong>Body:<strong>
+  <%= @wood.body %>
+</p>
+
+<%= link_to 'Edit', edit_wood_path(@wood) %>
+<%= link_to 'Back', woods_path %>

@@ -1,0 +1,2 @@
+class Pocket < ApplicationRecord
+end

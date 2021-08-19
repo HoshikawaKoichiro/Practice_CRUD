@@ -1,0 +1,14 @@
+<P id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pasta.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @pasta.body %>
+</p>
+
+<%= link_to 'Edit', edit_pasta_path(@pasta) %>
+<%= link_to 'Back', pastas_path %>

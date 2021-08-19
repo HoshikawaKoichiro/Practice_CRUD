@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bridge.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @bridge.body %>
+</p>
+
+<%= link_to 'Edit', edit_bridge_path(@bridge) %>
+<%= link_to 'Back', bridges_path %>

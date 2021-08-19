@@ -1,0 +1,14 @@
+<p id= "notice"><%= notice %></p>
+
+<p>
+   <strong>Totle:</strong>
+   <%= @pocket.title %>
+</p>
+
+<p>  
+   <strong>Body:</strong>
+   <%= @pocket.body%>
+</p>
+
+<%= link_to 'Edit', edit_pocket_path(@pocket) %>
+<%= link_to 'Back', pockets_path %>

@@ -1,0 +1,28 @@
+<%= form_with(model: bridge) do |form|%>
+  <% if bridge.errors.any? %>
+    <div id="error_explanatiom">
+      <h2><%= pluralize(bridge.errors.count,"error")%>prohibited this bridge from being saved:</h2>
+
+      <ul>
+        <% bridge.errors.each do |error|%>
+        <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

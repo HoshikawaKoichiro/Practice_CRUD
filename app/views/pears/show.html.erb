@@ -1,0 +1,14 @@
+<p id= "notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pear.title%></strong>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @pear.body%></strong>
+</p>
+
+<%= link_to 'Edit', edit_pear_path(@pear) %>
+<%= link_to 'Back', pears_path %>

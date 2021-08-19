@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kiwis</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kiwis.each do |kiwi|%>
+      <tr>
+        <td><%= kiwi.title%></td>
+        <td><%= kiwi.body%></td>
+        <td><%= link_to 'Show', kiwi %></td>
+        <td><%= link_to 'Edit', edit_kiwi_path(kiwi) %></td>
+        <td><%= link_to 'Destroy', kiwi, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+  <%= link_to 'New Kiwi', new_kiwi_path %>

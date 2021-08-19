@@ -1,0 +1,26 @@
+<p id="notice"><% notice %></p>
+<h1>Pears</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pears.each do |pear| %>
+      <tr>
+        <td><%= pear.title %></td>
+        <td><%= pear.body%></td>
+        <td><%= link_to 'Show', pear %></td>
+        <td><%= link_to 'Back', edit_pear_path(pear) %>
+        <td><%= link_to 'Destroy', pear, method: :delete, data:{confirm: 'Are you sure?'}%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+  <%= link_to 'New pear', new_pear_path %>
