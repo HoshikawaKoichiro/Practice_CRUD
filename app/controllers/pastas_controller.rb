@@ -18,7 +18,7 @@ class PastasController < ApplicationController
     def create
         @pasta = Pasta.new(pasta_params)
         if @pasta.save
-            redirect_to @pasta, notice: "Pasta was successfully created."
+              redirect_to pasta_path(@pasta), notice: "パスタは無事作成されました"
         else
             render :new, status: :unprocessable_entity
         end

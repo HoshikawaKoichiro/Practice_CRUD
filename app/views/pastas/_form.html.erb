@@ -1,4 +1,4 @@
-<%= form_with(model: pasta) do |form| %>
+<%= form_with model: pasta, url: pasta.new_record? ? pastas_path  : pasta_path(pasta) do |form| %>
   <% if pasta.errors.any?%>
     <div id="error_explanation">
       <h2><%= pluralize(pasta.errors.count,"error")%>prohibited this pasta from being saved:</h2>
